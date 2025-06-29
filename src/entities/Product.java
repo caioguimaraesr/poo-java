@@ -19,6 +19,6 @@ public class Product {
     }
 
     public String toString(){ // o "toString" é como fosse um def __str__ em python
-        return name + ", & " + String.format("%.2f", price) + ", " + quantity + "units , Total: $ " + totalValueInStock();
+        return name + ", & " + String.format("%.2f", price) + ", " + quantity + " units , Total: $ " + totalValueInStock();
     }
 }
