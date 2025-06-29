@@ -8,6 +8,7 @@ public class Program {
     public static void main(String[] args) {
 
         Locale.setDefault(Locale.US);
+        double areaX, areaY, p;
         Triangle x, y;
 
         // a função "new" aloca dinâmicamente.
@@ -24,11 +25,8 @@ public class Program {
         y.b = sc.nextDouble();
         y.c = sc.nextDouble();
 
-        double p = (x.a + x.b + x.c) / 2;
-        double areaX = Math.sqrt(p* (p - x.a) * (p - x.b) * (p - x.c));
-
-        p = (y.a + y.b + y.c) / 2;
-        double areaY = Math.sqrt(p*( p - y.a) * (p - y.b) * (p - y.c));
+        areaX = x.area();
+        areaY = y.area();
 
         System.out.printf("Área de X: %.4f%n", areaX);
         System.out.printf("Área de Y: %.4f%n", areaY);
