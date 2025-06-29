@@ -1,6 +1,8 @@
 package application;
 import java.util.Locale;
 import java.util.Scanner;
+
+import entities.Rectangle;
 import entities.Triangle;
 import entities.Product;
 
@@ -9,13 +11,15 @@ public class Program {
     private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         while(true){
-            System.out.println("(1)-Exercício 1\n(2)Exercício 2\n(0)Sair");
+            System.out.println("(1)-Exercício 1\n(2)Exercício 2\n(3)Exercício 3\n(0)Sair");
             System.out.print("Escolha uma opção: ");
             int opt = sc.nextInt();
             if(opt == 1){
                 ex1();
-            }else if(opt == 2){
+            }else if(opt == 2) {
                 ex2();
+            }else if(opt == 3){
+                ex3();
             }else if(opt == 0){
                 break;
             }
@@ -82,5 +86,16 @@ public class Program {
         product.removeProducts(remove);
 
         System.out.printf("Updated data: %s%n", product);
+    }
+
+    public static void ex3(){
+        Rectangle rectangle = new Rectangle();
+
+        rectangle.width = sc.nextDouble();
+        rectangle.height = sc.nextDouble();
+
+        System.out.printf("AREA: %f", rectangle.area());
+        System.out.printf("PERIMETER: %f", rectangle.perimeter());
+        System.out.printf("DIAGONAL: %f", rectangle.diagonal());
     }
 }
