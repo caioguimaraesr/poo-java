@@ -10,7 +10,7 @@ public class Program {
         Locale.setDefault(Locale.US);
         Triangle x, y;
 
-        // a função "new" é aloca dinâmicamente.
+        // a função "new" aloca dinâmicamente.
         x = new Triangle();
         y = new Triangle();
 
