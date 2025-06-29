@@ -17,4 +17,8 @@ public class Product {
     public void removeProducts(int quantity) {
         this.quantity -= quantity;
     }
+
+    public String toString(){ // o "toString" é como fosse um def __str__ em python
+        return name + ", & " + String.format("%.2f", price) + ", " + quantity + "units , Total: $ " + totalValueInStock();
+    }
 }
