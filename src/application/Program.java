@@ -70,9 +70,7 @@ public class Program {
         String name = sc.nextLine();
         System.out.print("Price: ");
         double price = sc.nextDouble();
-        System.out.print("Quantity in stock: ");
-        int quantity = sc.nextInt();
-        Product product = new Product(name, price, quantity);
+        Product product = new Product(name, price);
 
         System.out.printf("Product data: %s%n", product); // or System.out.println("Product Data: %s%n", product.toString);
 
