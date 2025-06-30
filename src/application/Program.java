@@ -13,7 +13,7 @@ public class Program {
     private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         while(true){
-            System.out.println("(1)-Exercício 1\n(2)Exercício 2\n(3)Exercício 3\n(4)Exercício 4\n(0)Sair");
+            System.out.println("(1)-Exercício 1\n(2)Exercício 2\n(3)Exercício 3\n(4)Exercício 4\n(5)Exercício 5\n(0)Sair");
             System.out.print("Escolha uma opção: ");
             int opt = sc.nextInt();
             if(opt == 1){
