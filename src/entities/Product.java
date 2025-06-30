@@ -1,9 +1,9 @@
 package entities;
 
 public class Product {
-    public String name;
-    public double price;
-    public int quantity;
+    private String name;
+    private double price;
+    private int quantity;
 
     public Product(){
 
@@ -31,6 +31,27 @@ public class Product {
 
     public void removeProducts(int quantity) {
         this.quantity -= quantity;
+    }
+
+    // encapsulamento (setter e getter)
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setPrice(double price){
+        this.price = price;
+    }
+
+    public double getPrice(){
+        return price;
+    }
+
+    public int getQuantity(){
+        return quantity;
     }
 
     public String toString(){ // o "toString" é como fosse um def __str__ em python

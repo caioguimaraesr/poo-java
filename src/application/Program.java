@@ -72,6 +72,15 @@ public class Program {
         double price = sc.nextDouble();
         Product product = new Product(name, price);
 
+        // encapsulamento
+        // 1- name
+        product.setName("Computer");
+        System.out.println("Updated name: " + product.getName());
+
+        // 2- price
+        product.setPrice(1000.00);
+        System.out.println("Updated price: " + product.getPrice());
+
         System.out.printf("Product data: %s%n", product); // or System.out.println("Product Data: %s%n", product.toString);
 
         System.out.print("Enter the number of products to be add in stock: ");
