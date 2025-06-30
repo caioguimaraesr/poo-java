@@ -64,20 +64,15 @@ public class Program {
     }
 
     public static void ex2(){
-        Product product = new Product();
-
         System.out.println("Enter product data: ");
-
         sc.nextLine();
-
         System.out.print("Name: ");
-        product.name = sc.nextLine();
-
+        String name = sc.nextLine();
         System.out.print("Price: ");
-        product.price = sc.nextDouble();
-
+        double price = sc.nextDouble();
         System.out.print("Quantity in stock: ");
-        product.quantity = sc.nextInt();
+        int quantity = sc.nextInt();
+        Product product = new Product(name, price, quantity);
 
         System.out.printf("Product data: %s%n", product); // or System.out.println("Product Data: %s%n", product.toString);
 
