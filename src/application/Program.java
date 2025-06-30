@@ -5,6 +5,7 @@ import java.util.Scanner;
 import entities.Employee;
 import entities.Rectangle;
 import entities.Triangle;
+import entities.Student;
 import entities.Product;
 
 public class Program {
@@ -21,8 +22,10 @@ public class Program {
                 ex2();
             }else if(opt == 3) {
                 ex3();
-            }else if(opt == 4){
+            }else if(opt == 4) {
                 ex4();
+            }else if(opt == 5){
+                ex5();
             }else if(opt == 0){
                 break;
             }
@@ -123,5 +126,21 @@ public class Program {
         emp.increaseSalary(percentage);
 
         System.out.println("Updated data: " + emp);
+    }
+
+    public static void ex5(){
+        Student n = new Student();
+        sc.nextLine();
+
+        System.out.print("Nome: ");
+        n.nome = sc.nextLine();
+        System.out.print("Nota 1: ");
+        n.nota1 = sc.nextDouble();
+        System.out.print("Nota 2: ");
+        n.nota2 = sc.nextDouble();
+        System.out.print("Nota 3: ");
+        n.nota3 = sc.nextDouble();
+
+        n.approvad();
     }
 }
