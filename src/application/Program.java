@@ -2,6 +2,7 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Employee;
 import entities.Rectangle;
 import entities.Triangle;
 import entities.Product;
@@ -11,15 +12,17 @@ public class Program {
     private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         while(true){
-            System.out.println("(1)-Exercício 1\n(2)Exercício 2\n(3)Exercício 3\n(0)Sair");
+            System.out.println("(1)-Exercício 1\n(2)Exercício 2\n(3)Exercício 3\n(4)Exercício 4\n(0)Sair");
             System.out.print("Escolha uma opção: ");
             int opt = sc.nextInt();
             if(opt == 1){
                 ex1();
             }else if(opt == 2) {
                 ex2();
-            }else if(opt == 3){
+            }else if(opt == 3) {
                 ex3();
+            }else if(opt == 4){
+                ex4();
             }else if(opt == 0){
                 break;
             }
@@ -97,5 +100,28 @@ public class Program {
         System.out.printf("AREA: %f", rectangle.area());
         System.out.printf("PERIMETER: %f", rectangle.perimeter());
         System.out.printf("DIAGONAL: %f", rectangle.diagonal());
+    }
+
+    public static void ex4(){
+        Employee emp = new Employee();
+        sc.nextLine();
+
+        System.out.print("Name: ");
+        emp.name = sc.nextLine();
+
+        System.out.print("Gross Salary: ");
+        emp.grossSalary = sc.nextDouble();
+
+        System.out.print("Tax: ");
+        emp.tax = sc.nextDouble();
+
+        System.out.println("Employee " + emp);
+
+        System.out.print("Which percentage to increase salary? ");
+        double percentage = sc.nextDouble();
+
+        emp.increaseSalary(percentage);
+
+        System.out.println("Updated data: " + emp);
     }
 }
