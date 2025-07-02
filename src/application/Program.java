@@ -7,13 +7,14 @@ import entities.Rectangle;
 import entities.Triangle;
 import entities.Student;
 import entities.Product;
+import entities.Bank;
 
 public class Program {
     static {Locale.setDefault(Locale.US);}
     private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         while(true){
-            System.out.println("(1)-Exercício 1\n(2)Exercício 2\n(3)Exercício 3\n(4)Exercício 4\n(5)Exercício 5\n(0)Sair");
+            System.out.println("(1)-Exercício 1\n(2)Exercício 2\n(3)Exercício 3\n(4)Exercício 4\n(5)Exercício 5\n(6)Exercicio 6\n(0)Sair");
             System.out.print("Escolha uma opção: ");
             int opt = sc.nextInt();
             if(opt == 1){
@@ -24,8 +25,10 @@ public class Program {
                 ex3();
             }else if(opt == 4) {
                 ex4();
-            }else if(opt == 5){
+            }else if(opt == 5) {
                 ex5();
+            }else if(opt == 6){
+                ex6();
             }else if(opt == 0){
                 break;
             }
@@ -144,5 +147,40 @@ public class Program {
         n.nota3 = sc.nextDouble();
 
         n.approvad();
+    }
+
+    public static void ex6(){
+        System.out.print("Enter account number: ");
+        int account = sc.nextInt();
+
+        System.out.print("Enter account holder: ");
+        String name = sc.next();
+
+        System.out.print("Is there na initial deposit (y/n)? ");
+        char opt = sc.next().charAt(0);
+
+        Bank bank;
+        if(opt == 'y'){
+            System.out.print("Enter initial deposit value: ");
+            double deposit = sc.nextDouble();
+            bank = new Bank(account, name, deposit);
+        }else{
+            bank = new Bank(account, name);
+        }
+
+        System.out.println("Account data: ");
+        System.out.println(bank);
+
+        System.out.print("Enter a deposit value: ");
+        double value = sc.nextDouble();
+        bank.deposit(value);
+        System.out.println("Updated account data: ");
+        System.out.println(bank);
+
+        System.out.print("Enter a withdraw value: ");
+        value = sc.nextDouble();
+        bank.take(value);
+        System.out.println("Updated account data: ");
+        System.out.println(bank);
     }
 }
