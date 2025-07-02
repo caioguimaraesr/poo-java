@@ -14,7 +14,7 @@ public class Program {
     private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         while(true){
-            System.out.println("(1)-Exercício 1\n(2)Exercício 2\n(3)Exercício 3\n(4)Exercício 4\n(5)Exercício 5\n(6)Exercicio 6\n(0)Sair");
+            System.out.println("(1)-Exercício 1\n(2)Exercício 2\n(3)Exercício 3\n(4)Exercício 4\n(5)Exercício 5\n(6)Exercicio 6\n(7)Exercício 7\n(0)Sair");
             System.out.print("Escolha uma opção: ");
             int opt = sc.nextInt();
             if(opt == 1){
@@ -27,8 +27,10 @@ public class Program {
                 ex4();
             }else if(opt == 5) {
                 ex5();
-            }else if(opt == 6){
+            }else if(opt == 6) {
                 ex6();
+            }else if(opt == 7){
+                ex7();
             }else if(opt == 0){
                 break;
             }
@@ -182,5 +184,23 @@ public class Program {
         bank.take(value);
         System.out.println("Updated account data: ");
         System.out.println(bank);
+    }
+
+    public static void ex7(){
+        int qnt = sc.nextInt();
+        double[] vect = new double[qnt];
+
+        for(int i=0; i<qnt; i++){
+            vect[i] = sc.nextDouble();
+        }
+
+        double sum = 0;
+        for(int i=0; i<qnt; i++){
+            sum+=vect[i];
+        }
+
+        double media = sum / qnt;
+
+        System.out.printf("SUM: %.2f\n", media);
     }
 }
