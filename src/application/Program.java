@@ -2,12 +2,7 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Employee;
-import entities.Rectangle;
-import entities.Triangle;
-import entities.Student;
-import entities.Product;
-import entities.Bank;
+import entities.*;
 
 public class Program {
     static {Locale.setDefault(Locale.US);}
@@ -202,5 +197,26 @@ public class Program {
         double media = sum / qnt;
 
         System.out.printf("SUM: %.2f\n", media);
+    }
+
+    public static void ex8(){
+        int n = sc.nextInt();
+
+        Sotre[] vect = new Sotre[n];
+
+        for(int i=0; i<vect.length; i++){
+            sc.nextLine();
+            String name = sc.nextLine();
+            double price = sc.nextDouble();
+            vect[i] = new Sotre(name, price);
+        }
+
+        double soma = 0.0;
+        for(int i=0; i<vect.length; i++){
+            soma+=vect[i].getPrice();
+        }
+        double media = soma / vect.length;
+
+        System.out.printf("Media: %f", media);
     }
 }
